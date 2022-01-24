@@ -2,7 +2,7 @@ html {
     overflow-y: scroll
 }
 :root {
-    --bgcolor: black;
+    --bgcolor: rgb(41, 41, 41);
     --fontcolor: white;
     --linkcolor: #5bf;
     --visitedcolor: #ae5ee0;
@@ -62,4 +62,34 @@ img {
     max-width: 100%;
     height: auto;
     margin: auto
+}
+
+.logo {
+    display: inline-block;
+    width: 100px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr33fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title    logos"
+        "title    subtitle";
+}
+
+header #title {
+    grid-area: title;
+    justify-self: center;
+    align-self: center;
+}
+
+header #subtitle {
+    grid-area: subtitle;
+    justify-self: right;
+}
+
+header #logos {
+    grid-area: logos;
+    justify-self: right;
 }
