@@ -1,7 +1,7 @@
 <header>
     <div id=title>
       {{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}<br>
-      == <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> ==<br>
+      == {{ .Site.Title }} ==<br>
       {{ strings.Repeat ( .Site.Title | len | add 6 ) "=" }}
     </div>
     <div id=subtitle>{{ .Site.Params.subtitle }}</div>
@@ -10,4 +10,11 @@
       <img class=logo src=/img/logos/riley.png />
       <img class=logo src=/img/logos/c7zr1.png />
     </div>
+    <nav>
+    <ul>
+      <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/tags">Tags</a></li>
+    </ul>
+    </nav>
 </header>
